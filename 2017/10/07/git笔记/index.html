@@ -6,14 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Git笔记 CLI（Command Line Interface） 命令行接口，一切都是在黑窗口中通过命令进行交互。  理想中的程序员：  CLI vs GUI常见 shell DOS cmd Powershell Terminal Bash zsh iTerm  建议：学习 Linux 上的命令行，最通用最强大。  安装 Linux 操作系统 在虚拟机中安装 Linux 操作系统 Windows">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/10/07/git笔记/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Git笔记 CLI（Command Line Interface） 命令行接口，一切都是在黑窗口中通过命令进行交互。  理想中的程序员：  CLI vs GUI常见 shell DOS cmd Powershell Terminal Bash zsh iTerm  建议：学习 Linux 上的命令行，最通用最强大。  安装 Linux 操作系统 在虚拟机中安装 Linux 操作系统 Windows">
+<meta property="og:image" content="http://yoursite.com/2017/10/07/git笔记/media/logo@2x.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/07/git笔记/media/youth-digital-kids-code-online-696x391.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/07/git笔记/media/0.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/10/07/git笔记/media/linus-eff-you-640x363.png">
+<meta property="og:image" content="http://yoursite.com/2017/10/07/git笔记/media/bg2015120901.png">
+<meta property="og:updated_time" content="2017-10-07T13:51:38.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Git笔记 CLI（Command Line Interface） 命令行接口，一切都是在黑窗口中通过命令进行交互。  理想中的程序员：  CLI vs GUI常见 shell DOS cmd Powershell Terminal Bash zsh iTerm  建议：学习 Linux 上的命令行，最通用最强大。  安装 Linux 操作系统 在虚拟机中安装 Linux 操作系统 Windows">
+<meta name="twitter:image" content="http://yoursite.com/2017/10/07/git笔记/media/logo@2x.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -149,97 +159,401 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-git笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Git笔记"><a href="#Git笔记" class="headerlink" title="Git笔记"></a>Git笔记</h1><p><img src="./media/logo@2x.png" alt=""></p>
+<h2 id="CLI（Command-Line-Interface）"><a href="#CLI（Command-Line-Interface）" class="headerlink" title="CLI（Command Line Interface）"></a>CLI（Command Line Interface）</h2><blockquote>
+<p>命令行接口，一切都是在黑窗口中通过命令进行交互。</p>
+</blockquote>
+<p>理想中的程序员：</p>
+<p><img src="./media/youth-digital-kids-code-online-696x391.jpg" alt="youth-digital-kids-code-online-696x391.jpg"></p>
+<h3 id="CLI-vs-GUI"><a href="#CLI-vs-GUI" class="headerlink" title="CLI vs GUI"></a>CLI vs GUI</h3><h3 id="常见-shell"><a href="#常见-shell" class="headerlink" title="常见 shell"></a>常见 shell</h3><ul>
+<li>DOS</li>
+<li>cmd</li>
+<li>Powershell</li>
+<li>Terminal</li>
+<li>Bash</li>
+<li>zsh</li>
+<li>iTerm</li>
+</ul>
+<p>建议：学习 Linux 上的命令行，最通用最强大。</p>
+<ul>
+<li>安装 Linux 操作系统</li>
+<li>在虚拟机中安装 Linux 操作系统</li>
+<li>Windows 10 中安装 Linux</li>
+<li>Cygwin 模拟环境</li>
+</ul>
+<p>你如果安装了 git 就已经自带了这个 Cygwin 模拟环境。</p>
+<p>在 Cygwin 模拟环境中，可以学习使用常用的 Linux 上的命令行。</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><ul>
+<li>工作目录<ul>
+<li>cd、ls、mkdir 等命令操作后面都需要跟一个路径，这个路径都是相对于你的工作目录</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> (Print Working Directory) 查看当前目录</div><div class="line"><span class="meta">$</span> pwd</div><div class="line"></div><div class="line"><span class="meta">#</span> (Change Directory) 切换目录，如 cd /etc</div><div class="line"><span class="meta">#</span> cd ~ 直接切换到用户目录</div><div class="line"><span class="meta">#</span> cd ~/xx 切换到用户目录下的某个目录</div><div class="line"><span class="meta">$</span> cd</div><div class="line"></div><div class="line"><span class="meta">#</span>  (List) 查看当前目录下内容，如 ls -al</div><div class="line"><span class="meta">$</span> ls</div><div class="line"></div><div class="line"><span class="meta">#</span> (Make Directory) 创建目录，如 mkdir blog</div><div class="line"><span class="meta">$</span> mkdir</div><div class="line"></div><div class="line"><span class="meta">#</span> 创建文件，如 touch index.html</div><div class="line"><span class="meta">$</span> touch</div><div class="line"></div><div class="line"><span class="meta">#</span> 查看文件全部内容，如 cat index.html</div><div class="line"><span class="meta">$</span> cat</div><div class="line"></div><div class="line"><span class="meta">#</span> 查看文件，如more /etc/passwd、less /etc/passwd</div><div class="line"><span class="meta">#</span> 分页查看，不是一次性全部输出</div><div class="line"><span class="meta">$</span> less</div><div class="line"></div><div class="line"><span class="meta">#</span> (remove) 删除文件，如 rm index.html、rm -rf  blog</div><div class="line"><span class="meta">#</span> recursive</div><div class="line"><span class="meta">#</span> f force</div><div class="line"><span class="meta">#</span> 如果有一些比较顽固的文件或者目录</div><div class="line"><span class="meta">#</span> 注意：直接彻底的干掉了，不会进入回收站</div><div class="line"><span class="meta">$</span> rm</div><div class="line"></div><div class="line"><span class="meta">#</span> (Remove Directory) 删除文件夹，只能删除空文件夹，不常用</div><div class="line"><span class="meta">$</span> rmdir</div><div class="line"></div><div class="line"><span class="meta">#</span> (move) 移动文件或重命名，如 mv index.html ./demo/index.html</div><div class="line"><span class="meta">$</span> mv</div><div class="line"></div><div class="line"><span class="meta">#</span> (copy) 复制文件，cp index.html ./demo/index.html</div><div class="line"><span class="meta">#</span> cp -r 要拷贝的目录路径 拷贝到的目录路径</div><div class="line"><span class="meta">$</span> cp</div><div class="line"></div><div class="line"><span class="meta">#</span> 向文件中写入内容，&gt; 覆盖，&gt;&gt; 追加</div><div class="line"><span class="meta">$</span> echo</div><div class="line"></div><div class="line"><span class="meta">#</span> 清屏</div><div class="line"><span class="meta">$</span> clear</div><div class="line"></div><div class="line"><span class="meta">#</span> 网络测试</div><div class="line"><span class="meta">#</span> ping ip地址 -t</div><div class="line"><span class="meta">$</span> ping ip地址</div></pre></td></tr></table></figure>
+<p>提示：</p>
+<ul>
+<li>在命令行中一般只能处理文件或者说是文本文件</li>
+</ul>
+<ul>
+<li>tab 自动补全，连按两次会将所有匹配内容显示出来</li>
+<li>按下上箭头可以调出历史记录</li>
+<li>操作系统有用户的功能，可以创建多个不同的用户</li>
+<li>不同的用户具有自己的用户目录，一般存在于 c:/Users/用户名</li>
+<li>在终端中，目录中的 ~ 一般就标识用户目录</li>
+<li>当前工作目录</li>
+<li>用户目录</li>
+</ul>
+<h3 id="VI-visual-Interface-编辑器"><a href="#VI-visual-Interface-编辑器" class="headerlink" title="VI(visual Interface) 编辑器"></a>VI(visual Interface) 编辑器</h3><blockquote>
+<p>linux 操作系统标配，相当于windows下的记事本。</p>
+</blockquote>
+<h4 id="VI-编辑器的三种模式"><a href="#VI-编辑器的三种模式" class="headerlink" title="VI 编辑器的三种模式"></a>VI 编辑器的三种模式</h4><p>vi编辑器提供了3种模式，分别是命令模式、插入模式、底行模式，每种模式下用户所能进行的操作是不一样的。</p>
+<p>第一次进入 vi 编辑器不要直接编辑，默认停留在命令模式。你输入的任何字母都有其特定含义，例如 dd 用来删除光标停留的行。</p>
+<p>如果需要对文本进行编辑，则需要退出命令模式，进入编辑模式。使用命令：i 进入编辑模式。</p>
+<p>在任何模式下，按 ESC 都是直接进入命令模式。</p>
+<p>如果需要对文件进行：保存、退出、等操作。则需要在命令模式下输入：</p>
+<ul>
+<li><code>:w</code> 保存</li>
+</ul>
+<p>以上这些指令输入完毕之后，都必须按回车确认才可以执行。</p>
+<p>命令执行结束之后还是回到命令模式。</p>
+<h4 id="VI-常用操作"><a href="#VI-常用操作" class="headerlink" title="VI 常用操作"></a>VI 常用操作</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span> 打开/创建文件</div><div class="line">vi 文件路径</div><div class="line"></div><div class="line"><span class="meta">#</span> 命令模式</div><div class="line">ZZ（大写）保存并退出</div><div class="line">u 辙销操作，可多次使用</div><div class="line">dd 删除当前行</div><div class="line">yy 复制当前行</div><div class="line">p 粘贴内容</div><div class="line">ctrl+f 向前翻页</div><div class="line">ctrl+b 向后翻页</div><div class="line">i 进入编辑模式，当前光标处插入</div><div class="line">a 进入编辑模式，当前光标后插入</div><div class="line">A 进入编辑模式，光标移动到行尾</div><div class="line">o 进入编辑模式，当前行下面插入新行</div><div class="line">O 进入编辑模式，当前行上面插入新行</div><div class="line"></div><div class="line"><span class="meta">#</span> 底行模式 </div><div class="line">:w 保存</div><div class="line">:w filenme 另存为</div><div class="line">:q 退出</div><div class="line">:wq 保存并退出</div><div class="line">:e! 撤销更改，返回到上一次保存的状态</div><div class="line">:q! 不保存强制退出</div><div class="line">:set nu 设置行号</div></pre></td></tr></table></figure>
+<h2 id="版本控制"><a href="#版本控制" class="headerlink" title="版本控制"></a>版本控制</h2><h3 id="问题1：历史记录"><a href="#问题1：历史记录" class="headerlink" title="问题1：历史记录"></a>问题1：历史记录</h3><p><img src="./media/0.jpg" alt="0.jpg"></p>
+<h3 id="问题2：多人协作"><a href="#问题2：多人协作" class="headerlink" title="问题2：多人协作"></a>问题2：多人协作</h3><h3 id="解决问题：软件"><a href="#解决问题：软件" class="headerlink" title="解决问题：软件"></a>解决问题：软件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">版本  用户  说明                   日期</div><div class="line">1     张三  删除了软件服务条款5    7/12 10:38</div><div class="line">2     张三  增加了License人数限制  7/12 18:09</div><div class="line">3     李四  财务部门调整了合同金额 7/13 9:51</div><div class="line">4     张三  延长了免费升级周期     7/14 15:17</div></pre></td></tr></table></figure>
+<h3 id="什么是版本控制？"><a href="#什么是版本控制？" class="headerlink" title="什么是版本控制？"></a>什么是版本控制？</h3><p>版本管理就是管理更新的历史记录，<br>它给我们提供了一些在软件开发过程中必不可少的功能，例如：</p>
+<ul>
+<li>记录一款软件添加或更改源代码的过程，保存历史记录，也叫快照</li>
+<li>回滚到特定阶段，恢复误删除的文件</li>
+<li>合并多人协作的文件等</li>
+<li>多人协同，文件传输</li>
+</ul>
+<h3 id="版本控制分类"><a href="#版本控制分类" class="headerlink" title="版本控制分类"></a>版本控制分类</h3><ul>
+<li>集中式<ul>
+<li>SVN</li>
+</ul>
+</li>
+<li>分布式<ul>
+<li>Git</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git-介绍"><a href="#Git-介绍" class="headerlink" title="Git 介绍"></a>Git 介绍</h2><h3 id="Git-的作者：Linus-Benedict-Torvalds"><a href="#Git-的作者：Linus-Benedict-Torvalds" class="headerlink" title="Git 的作者：Linus Benedict Torvalds"></a>Git 的作者：Linus Benedict Torvalds</h3><p><img src="./media/linus-eff-you-640x363.png" alt="linus-eff-you-640x363.png"></p>
+<ul>
+<li><a href="https://baike.baidu.com/item/%E6%9E%97%E7%BA%B3%E6%96%AF%C2%B7%E6%89%98%E7%93%A6%E5%85%B9/2122821?fromtitle=Linus%20Torvalds&amp;fromid=9336769" target="_blank" rel="external">百度百科-林纳斯·托瓦兹</a></li>
+<li><a href="https://www.zhihu.com/question/21994269" target="_blank" rel="external">知乎-林纳斯·托瓦兹（Linus Torvalds）为什么被称作大神？</a></li>
+<li><a href="https://www.youtube.com/watch?v=iYWzMvlj2RQ" target="_blank" rel="external">YouTube-Linus Torvalds: Nvidia, Fuck You!</a></li>
+<li><a href="https://book.douban.com/subject/25930025/" target="_blank" rel="external">《只是为了好玩》</a></li>
+</ul>
+<h3 id="什么是-Git"><a href="#什么是-Git" class="headerlink" title="什么是 Git"></a>什么是 Git</h3><h3 id="Git-的诞生背景"><a href="#Git-的诞生背景" class="headerlink" title="Git 的诞生背景"></a><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/00137402760310626208b4f695940a49e5348b689d095fc000" target="_blank" rel="external">Git 的诞生背景</a></h3><h3 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h3><ul>
+<li><a href="https://git-scm.com/" target="_blank" rel="external">Git 官网</a></li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/" target="_blank" rel="external">Git教程 - 廖雪峰</a></li>
+<li><a href="https://git-scm.com/book/zh/v2" target="_blank" rel="external">Pro Git</a></li>
+<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="external">git - 简明指南</a></li>
+<li><a href="http://backlogtool.com/git-guide/cn/" target="_blank" rel="external">猴子都能懂的GIT入门</a></li>
+</ul>
+<h2 id="安装和配置-Git-环境"><a href="#安装和配置-Git-环境" class="headerlink" title="安装和配置 Git 环境"></a>安装和配置 Git 环境</h2><h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><ul>
+<li>下载地址：<a href="https://git-scm.com/downloads" target="_blank" rel="external">https://git-scm.com/downloads</a></li>
+</ul>
+<h3 id="初始化配置"><a href="#初始化配置" class="headerlink" title="初始化配置"></a>初始化配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 设置用户名</span></div><div class="line">git config --global user.name <span class="string">"你的名字"</span></div><div class="line"><span class="comment"># 配置用户邮箱</span></div><div class="line">git config --global user.email <span class="string">"你的常用邮箱"</span></div><div class="line"><span class="comment"># 设置 gitk 图形查看工具中文显示默认编码（防止乱码）</span></div><div class="line">git config --global gui.encoding utf-8</div><div class="line"><span class="comment"># 查看配置列表项</span></div><div class="line">git config --list</div></pre></td></tr></table></figure>
+<h2 id="Git-的工作原理"><a href="#Git-的工作原理" class="headerlink" title="Git 的工作原理"></a>Git 的工作原理</h2><p><img src="./media/bg2015120901.png" alt="bg2015120901.png"></p>
+<p>Git 的代码管理方式是以版本为基本单位。</p>
+<ol>
+<li>把远程仓库下载到本地</li>
+<li>从远程仓库down下来的项目<ol>
+<li>工作区</li>
+<li>暂存区</li>
+<li>本地仓库</li>
+</ol>
+</li>
+<li>默认文件的添加和修改都在工作区</li>
+<li>如果希望进行文件备份或者是版本管理，这个时候就需要使用到暂存区和本地仓库</li>
+<li>本地仓库中存储的是一个一个的完整的版本</li>
+</ol>
+<ul>
+<li>工作区</li>
+<li>暂存区</li>
+<li>仓库区</li>
+<li>远程仓库</li>
+</ul>
+<ul>
+<li>仓库：repository ，用来存储项目的源代码</li>
+<li>本地<ul>
+<li>工作区</li>
+<li>暂存区</li>
+<li>本地仓库</li>
+</ul>
+</li>
+</ul>
+<p>默认修改的文件改动的都是工作区中的代码。</p>
+<p>暂存区是一个临时存储的空间。</p>
+<p>本地仓库就是真正的用来存储你的历史版本。</p>
+<p>在 git  中如何形成历史记录：</p>
+<ul>
+<li>先将希望保存历史记录的文件放到暂存区</li>
+<li>然后再把暂存区中的文件提交到本地仓库形成一次历史记录版本</li>
+</ul>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><p>先搞定历史记录问题，然后再看如何多人协作。</p>
+<ol>
+<li>配置用户信息</li>
+<li>初始化仓库</li>
+<li>添加文件到暂存区</li>
+<li>提交文件</li>
+<li>查看文件状态</li>
+<li>查看提交历史</li>
+<li>撤销文件修改</li>
+<li>恢复版本</li>
+</ol>
+<ul>
+<li><code>git init</code><ul>
+<li>初始化一个 Git 仓库</li>
+</ul>
+</li>
+<li><code>git status</code><ul>
+<li>查看当前工作区、暂存区、本地仓库的状态</li>
+</ul>
+</li>
+<li><code>git add</code></li>
+<li><code>git commit</code><ul>
+<li>示例：<code>git commit -m &quot;日志说明&quot; --author=&quot;操作者姓名 &lt;邮箱&gt;&quot;</code></li>
+<li>执行 <code>git commit</code> 的时候，Git 会要求具有用户名和邮箱的参数选项</li>
+<li>可以通过 <code>git config</code> 命令配置一下用户名和邮箱</li>
+</ul>
+</li>
+<li><code>git log</code></li>
+<li><code>gitk</code></li>
+</ul>
+<p>总结：操作 Git 的基本工作流程就是先修改文件，然后执行 <code>git add</code> 命令。<br><code>git add</code> 命令会把文件加入到暂存区，接着就可以执行 <code>git commit</code> 命令，将文件存入文档库，<br>从而形成一次历史记录。</p>
+<h3 id="使用总结"><a href="#使用总结" class="headerlink" title="使用总结"></a>使用总结</h3><p>如果需要使用 <code>git commit</code> 提交历史记录，则一定要具有你的个人信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git commit -m <span class="string">'提交日志'</span> --author <span class="string">'邮箱 用户名'</span></div></pre></td></tr></table></figure>
+<p>由于每次 <code>git commit</code> 都带上 <code>--author</code> 很麻烦，所以我们可以全局配置这个用户信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ git config --global user.email <span class="string">"你的邮箱"</span></div><div class="line">$ git config --global user.name <span class="string">"你的名字"</span></div><div class="line"></div><div class="line"><span class="comment"># 如果想要修改，则重新执行该命令即可。</span></div></pre></td></tr></table></figure>
+<p>只要通过以上的配置之后，你每次 <code>commit</code> 的时候就都会使用你配置的那个用户信息。</p>
+<ol>
+<li><p>配置用户信息</p>
+</li>
+<li><p>初始化仓库</p>
+</li>
+</ol>
+<p>你的所有的 git 相关操作都需要具备一个 git 仓库。<br>所以如果你的项目需要被 git 管理，则就必须在你的项目中使用 <code>git init</code> 初始化这个仓库。</p>
+<p class="tip"><br>  由于是管理整个项目，所以一定要在项目的根目录初始化。<br></p>
+
+<ol>
+<li>添加文件到暂存区</li>
+</ol>
+<p>不能直接把工作区中的文件直接提交到本地仓库，必须先进入暂存区。</p>
+<p>暂存区存在的意义：</p>
+<ul>
+<li>临时备份</li>
+<li><p>分批次提交</p>
+</li>
+<li><p>git add 文件名/目录</p>
+</li>
+<li>也可以多次执行 git add 添加多个文件/目录 到暂存区</li>
+<li>git add * 提交所有的文件到暂存区</li>
+<li>git add –all 提交所有的文件到暂存区</li>
+</ul>
+<ol>
+<li>提交暂存区中的文件形成历史记录</li>
+</ol>
+<ul>
+<li>git commit -m ‘提交日志’</li>
+</ul>
+<p><code>git commit</code> 的作用就是把暂存区中的内容作为一个版本记录保存到本地仓库，形成历史记录。<br>保存完毕，暂存区中的文件被清空。</p>
+<ol>
+<li>查看仓库中文件状态</li>
+</ol>
+<ul>
+<li>工作区</li>
+<li><p>暂存区</p>
+</li>
+<li><p>Untracked</p>
+<ul>
+<li>未被 git 管理跟踪的文件，一次历史记录都没有，一次暂存区都没进入</li>
+</ul>
+</li>
+<li>new file<ul>
+<li>文件第一次进入暂存区的状态</li>
+</ul>
+</li>
+<li>修改的</li>
+<li>删除的</li>
+<li>Changes not staged for commit modified<ul>
+<li>只要文件进入过暂存区或者形成过历史记录，则表示这个文件被 git 跟踪管理过</li>
+<li>该文件一定已经被 git 管理过了</li>
+<li>而你工作区的这个文件已经和：暂存区或者最新版本的历史记录中的文件已经不一致</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>查看提交历史</li>
+</ol>
+<ul>
+<li>git log</li>
+<li>gitk 以图形化的方式查看提交日志记录</li>
+</ul>
+<ol>
+<li>撤销文件修改</li>
+<li>恢复版本</li>
+</ol>
+<h2 id="新建代码库"><a href="#新建代码库" class="headerlink" title="新建代码库"></a>新建代码库</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 在当前目录新建一个Git代码库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git init</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 新建一个目录，将其初始化为Git代码库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git init [project-name]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 下载一个项目和它的整个代码历史</span></div><div class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">clone</span> [url]</span></div></pre></td></tr></table></figure>
+<h2 id="增加-删除文件"><a href="#增加-删除文件" class="headerlink" title="增加/删除文件"></a>增加/删除文件</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 添加指定文件到暂存区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git add [file1] [file2] ...</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 添加指定目录到暂存区，包括子目录</span></div><div class="line"><span class="meta">$</span><span class="bash"> git add [dir]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 添加当前目录的所有文件到暂存区</span></div><div class="line"><span class="meta">#</span><span class="bash"> *</span></div><div class="line"><span class="meta">#</span><span class="bash"> --all</span></div><div class="line"><span class="meta">$</span><span class="bash"> git add .</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 添加每个变化前，都会要求确认</span></div><div class="line"><span class="meta">#</span><span class="bash"> 对于同一个文件的多处变化，可以实现分次提交</span></div><div class="line"><span class="meta">$</span><span class="bash"> git add -p</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 删除工作区文件，并且将这次删除放入暂存区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git rm [file1] [file2] ...</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 停止追踪指定文件，但该文件会保留在工作区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git rm --cached [file]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 改名文件，并且将这个改名放入暂存区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git mv [file-original] [file-renamed]</span></div><div class="line"></div><div class="line">注意：如果在工作区需要删除或者重命名文件，建议使用 git rm/mv 来操作，这样操作完会直接进入暂存区，当你提交的时候会作为一次历史版本。</div><div class="line"></div><div class="line">- untracted</div><div class="line">	未被跟踪的文件</div><div class="line">- Changes to be committed</div><div class="line">	暂存区中可以被提交的文件</div><div class="line">- Changes not staged for commit</div><div class="line">  工作区文件变了，但是没有进入暂存区</div><div class="line">  删除</div><div class="line">  修改</div><div class="line">  重命名</div><div class="line">- 没有任何状态的文件</div><div class="line">	已经和最新版本保持一致，不会有任何提示</div></pre></td></tr></table></figure>
+<h2 id="代码提交"><a href="#代码提交" class="headerlink" title="代码提交"></a>代码提交</h2><p>注意：如果工作区的状态和最后一次提交的状态是一致的，则重复提交无效。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 提交暂存区到仓库区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -m [message]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 提交暂存区的指定文件到仓库区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit [file1] [file2] ... -m [message]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 提交工作区自上次commit之后的变化，直接到仓库区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -a -m <span class="string">'提交日志'</span></span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 提交时显示所有diff（比对文件的差异，有哪些改动）信息</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit -v</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 使用一次新的commit，替代上一次提交</span></div><div class="line"><span class="meta">#</span><span class="bash"> 如果代码没有任何新变化，则用来改写上一次commit的提交信息</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit --amend -m [message]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重做上一次commit，并包括指定文件的新变化</span></div><div class="line"><span class="meta">$</span><span class="bash"> git commit --amend [file1] [file2] ...</span></div></pre></td></tr></table></figure>
+<h2 id="撤销操作"><a href="#撤销操作" class="headerlink" title="撤销操作"></a>撤销操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 恢复暂存区的指定文件到工作区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git checkout [file]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 恢复某个commit的指定文件到暂存区和工作区</span></div><div class="line"><span class="meta">#</span><span class="bash"> commit 节点可以通过 git <span class="built_in">log</span> 或者 gitk 查看，节点 id 很长，只需要前7位即可</span></div><div class="line"><span class="meta">$</span><span class="bash"> git checkout [commit] [file]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 恢复暂存区的所有文件到工作区</span></div><div class="line"><span class="meta">$</span><span class="bash"> git checkout .</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重置暂存区的指定文件，与上一次commit（最近一次历史记录）保持一致，但工作区不变</span></div><div class="line"><span class="meta">$</span><span class="bash"> git reset [file]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重置暂存区与工作区，与上一次commit保持一致</span></div><div class="line"><span class="meta">$</span><span class="bash"> git reset --hard</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</span></div><div class="line"><span class="meta">$</span><span class="bash"> git reset [commit]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</span></div><div class="line"><span class="meta">$</span><span class="bash"> git reset --hard [commit]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 重置当前HEAD为指定commit，但保持暂存区和工作区不变</span></div><div class="line"><span class="meta">$</span><span class="bash"> git reset --keep [commit]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 新建一个commit，用来撤销指定commit</span></div><div class="line"><span class="meta">#</span><span class="bash"> 后者的所有变化都将被前者抵消，并且应用到当前分支</span></div><div class="line"><span class="meta">$</span><span class="bash"> git revert [commit]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 暂时将未提交的变化移除，稍后再移入</span></div><div class="line"><span class="meta">$</span><span class="bash"> git stash</span></div><div class="line"><span class="meta">$</span><span class="bash"> git stash pop</span></div></pre></td></tr></table></figure>
+<h2 id="分支操作"><a href="#分支操作" class="headerlink" title="分支操作"></a>分支操作</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 列出所有本地分支</span></div><div class="line">$ git branch</div><div class="line"></div><div class="line"><span class="comment"># 列出所有远程分支</span></div><div class="line">$ git branch -r</div><div class="line"></div><div class="line"><span class="comment"># 列出所有本地分支和远程分支</span></div><div class="line">$ git branch -a</div><div class="line"></div><div class="line"><span class="comment"># 新建一个分支，但依然停留在当前分支</span></div><div class="line">$ git branch [branch-name]</div><div class="line"></div><div class="line"><span class="comment"># 新建一个分支，并切换到该分支</span></div><div class="line">$ git checkout -b [branch]</div><div class="line"></div><div class="line"><span class="comment"># 新建一个分支，指向指定commit</span></div><div class="line">$ git branch [branch] [commit]</div><div class="line"></div><div class="line"><span class="comment"># 新建一个分支，与指定的远程分支建立追踪关系</span></div><div class="line">$ git branch --track [branch] [remote-branch]</div><div class="line"></div><div class="line"><span class="comment"># 切换到指定分支，并更新工作区</span></div><div class="line">$ git checkout [branch-name]</div><div class="line"></div><div class="line"><span class="comment"># 切换到上一个分支</span></div><div class="line">$ git checkout -</div><div class="line"></div><div class="line"><span class="comment"># 建立追踪关系，在现有分支与指定的远程分支之间</span></div><div class="line">$ git branch --set-upstream [branch] [remote-branch]</div><div class="line"></div><div class="line"><span class="comment"># 合并指定分支到当前分支</span></div><div class="line">$ git merge [branch]</div><div class="line"></div><div class="line"><span class="comment"># 选择一个commit，合并进当前分支</span></div><div class="line">$ git cherry-pick [commit]</div><div class="line"></div><div class="line"><span class="comment"># 删除分支</span></div><div class="line">$ git branch -d [branch-name]</div><div class="line"></div><div class="line"><span class="comment"># 删除远程分支</span></div><div class="line">$ git push origin --delete [branch-name]</div><div class="line">$ git branch -dr [remote/branch]</div></pre></td></tr></table></figure>
+<h2 id="远程同步（让你的项目飞上云端）"><a href="#远程同步（让你的项目飞上云端）" class="headerlink" title="远程同步（让你的项目飞上云端）"></a>远程同步（让你的项目飞上云端）</h2><p>把本地项目放到线上，便于备份和多人协作。</p>
+<p>对 Git 仓库提供云存储服务的产品有很多：</p>
+<ul>
+<li>GitHub</li>
+<li>bitbuccket</li>
+</ul>
+<ul>
+<li>开源中国：码云</li>
+<li>coding</li>
+<li>git remote 命令用来管理远程仓库地址</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#</span><span class="bash"> 下载远程仓库的所有变动</span></div><div class="line"><span class="meta">$</span><span class="bash"> git fetch [remote]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 显示所有远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote -v</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 显示某个远程仓库的信息</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote show [remote]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 增加一个新的远程仓库，并命名</span></div><div class="line"><span class="meta">$</span><span class="bash"> git remote add [shortname] [url]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 取回远程仓库的变化，并与本地分支合并</span></div><div class="line"><span class="meta">$</span><span class="bash"> git pull [remote] [branch]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 上传本地指定分支到远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] [branch]</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 强行推送当前分支到远程仓库，即使有冲突</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] --force</span></div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash"> 推送所有分支到远程仓库</span></div><div class="line"><span class="meta">$</span><span class="bash"> git push [remote] --all</span></div></pre></td></tr></table></figure>
+<h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="gitignore-忽略项配置文件"><a href="#gitignore-忽略项配置文件" class="headerlink" title=".gitignore 忽略项配置文件"></a>.gitignore 忽略项配置文件</h3><h3 id="git-config-配置"><a href="#git-config-配置" class="headerlink" title="git config 配置"></a>git config 配置</h3><h3 id="Git-记录账户信息问题"><a href="#Git-记录账户信息问题" class="headerlink" title="Git 记录账户信息问题"></a>Git 记录账户信息问题</h3><ul>
+<li>默认 Git 会记录你第一次登陆的用户名密码凭据</li>
+<li>如果想要在自己的本机切换多个账户，要记得去 Windows 的 凭据管理器 中删除 Git 记录的那个账户信息<ul>
+<li>然后你 push 的时候才会让你重新输入账户信息</li>
+</ul>
+</li>
+<li>如果你不想让 Git 帮你记录账户信息，则重新安装 Git ，在安装向导的过程中，把一个选项去除 credential</li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/07/git笔记/" class="archive-article-date">
-  	<time datetime="2017-10-07T13:36:47.563Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-07</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/07/git笔记/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/06/first-git/" class="archive-article-date">
-  	<time datetime="2017-10-06T02:06:00.078Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-06</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/06/first-git/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Git 基本操作</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/06/first-git/">Git 基本操作</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/10/06/hello-world/" class="archive-article-date">
-  	<time datetime="2017-10-06T00:49:21.125Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-06</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/10/06/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -262,8 +576,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
