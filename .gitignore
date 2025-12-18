@@ -1,0 +1,26 @@
+# Capacitor
+ios/App/Pods
+ios/App/public
+ios/App/Podfile.lock
+android/app/src/main/assets/public
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+*.log

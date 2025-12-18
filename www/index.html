@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>绘画板与录制</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- 顶部工具栏 -->
+        <div class="toolbar">
+            <h1>🎨 绘画板</h1>
+            <div class="toolbar-buttons">
+                <button id="clearBtn" class="btn btn-secondary">清空</button>
+                <button id="undoBtn" class="btn btn-secondary">撤销</button>
+                <button id="saveBtn" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+
+        <!-- 画板区域 -->
+        <div class="canvas-container">
+            <canvas id="drawingCanvas"></canvas>
+        </div>
+
+        <!-- 底部控制面板 -->
+        <div class="control-panel">
+            <!-- 画笔工具 -->
+            <div class="tool-section">
+                <h3>画笔设置</h3>
+                <div class="tool-group">
+                    <label>颜色:</label>
+                    <input type="color" id="colorPicker" value="#000000">
+                </div>
+                <div class="tool-group">
+                    <label>粗细:</label>
+                    <input type="range" id="brushSize" min="1" max="50" value="5">
+                    <span id="brushSizeValue">5</span>px
+                </div>
+                <div class="tool-group">
+                    <button id="penBtn" class="btn btn-tool active">✏️ 画笔</button>
+                    <button id="eraserBtn" class="btn btn-tool">🧹 橡皮擦</button>
+                </div>
+            </div>
+
+            <!-- 录制工具 -->
+            <div class="tool-section">
+                <h3>录制功能</h3>
+                <div class="recording-controls">
+                    <button id="recordAudioBtn" class="btn btn-record">
+                        🎤 <span id="audioStatus">开始录音</span>
+                    </button>
+                    <button id="recordScreenBtn" class="btn btn-record">
+                        📹 <span id="screenStatus">开始录屏</span>
+                    </button>
+                </div>
+                <div id="recordingInfo" class="recording-info" style="display: none;">
+                    <span id="recordingTime">00:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载 Capacitor -->
+    <script src="https://unpkg.com/@capacitor/core@latest/dist/capacitor.js"></script>
+    <script src="js/drawingBoard.js"></script>
+    <script src="js/recorder.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
