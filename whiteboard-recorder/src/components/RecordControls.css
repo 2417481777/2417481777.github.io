@@ -1,0 +1,164 @@
+.record-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.controls-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.control-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.control-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.control-btn:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.btn-text {
+  font-size: 14px;
+}
+
+.start-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.start-btn:hover {
+  background: linear-gradient(135deg, #5568d3 0%, #65408b 100%);
+}
+
+.pause-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.pause-btn:hover {
+  background: linear-gradient(135deg, #df7de6 0%, #e04156 100%);
+}
+
+.resume-btn {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+}
+
+.resume-btn:hover {
+  background: linear-gradient(135deg, #3896e8 0%, #00dce8 100%);
+}
+
+.stop-btn {
+  background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  color: white;
+}
+
+.stop-btn:hover {
+  background: linear-gradient(135deg, #e95a84 0%, #e8cb2a 100%);
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+  color: white;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #1ab9ba 0%, #220551 100%);
+}
+
+.clear-btn {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  color: white;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(135deg, #e95555 0%, #d84459 100%);
+}
+
+.recording-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.recording-indicator {
+  font-size: 20px;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.recording-indicator.paused {
+  animation: none;
+  opacity: 0.6;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.recording-time {
+  font-size: 18px;
+  color: #d63031;
+  font-family: 'Courier New', monospace;
+  min-width: 60px;
+}
+
+.recording-text {
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .record-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .controls-group {
+    justify-content: center;
+  }
+
+  .control-btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .recording-status {
+    justify-content: center;
+  }
+}
