@@ -1,0 +1,41 @@
+{
+  "name": "drawing-board-app",
+  "version": "1.0.0",
+  "description": "跨平台绘画板与录制应用",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx http-server www -p 8080",
+    "build": "npx cap sync",
+    "open:ios": "npx cap open ios",
+    "open:android": "npx cap open android",
+    "sync": "npx cap sync",
+    "copy": "npx cap copy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2417481777/2417481777.github.io.git"
+  },
+  "keywords": [
+    "capacitor",
+    "drawing",
+    "canvas",
+    "recording",
+    "mobile"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2417481777/2417481777.github.io/issues"
+  },
+  "homepage": "https://github.com/2417481777/2417481777.github.io#readme",
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/cli": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/filesystem": "^8.0.0",
+    "@capacitor/ios": "^6.2.0",
+    "@capacitor/share": "^8.0.0",
+    "capacitor-voice-recorder": "^7.0.6"
+  }
+}
