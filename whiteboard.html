@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC 白板录制</title>
+    <link rel="stylesheet" href="css/whiteboard.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WebRTC 白板录制系统</h1>
+            <p class="subtitle">基于Canvas和MediaRecorder的实时白板录制</p>
+        </header>
+
+        <div class="toolbar">
+            <div class="tool-group">
+                <label>绘图工具：</label>
+                <button id="penTool" class="tool-btn active" title="画笔">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M15.5 2.5l2 2-10 10-3 1 1-3z" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button id="eraserTool" class="tool-btn" title="橡皮擦">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <rect x="4" y="8" width="12" height="8" fill="currentColor"/>
+                    </svg>
+                </button>
+                <button id="clearCanvas" class="tool-btn" title="清空画布">
+                    <svg width="20" height="20" viewBox="0 0 20 20">
+                        <path d="M5 5 L15 15 M15 5 L5 15" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="tool-group">
+                <label>画笔颜色：</label>
+                <input type="color" id="colorPicker" value="#000000">
+                <div class="color-presets">
+                    <button class="color-preset" data-color="#000000" style="background: #000000;"></button>
+                    <button class="color-preset" data-color="#FF0000" style="background: #FF0000;"></button>
+                    <button class="color-preset" data-color="#00FF00" style="background: #00FF00;"></button>
+                    <button class="color-preset" data-color="#0000FF" style="background: #0000FF;"></button>
+                    <button class="color-preset" data-color="#FFFF00" style="background: #FFFF00;"></button>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <label>画笔粗细：</label>
+                <input type="range" id="brushSize" min="1" max="50" value="3">
+                <span id="brushSizeValue">3px</span>
+            </div>
+
+            <div class="tool-group">
+                <label>背景颜色：</label>
+                <input type="color" id="bgColorPicker" value="#FFFFFF">
+                <button id="applyBgColor" class="action-btn">应用背景</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="whiteboard"></canvas>
+            <div class="recording-indicator" id="recordingIndicator">
+                <span class="recording-dot"></span>
+                录制中 <span id="recordingTime">00:00</span>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="startRecording" class="control-btn start-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <circle cx="10" cy="10" r="8" fill="currentColor"/>
+                </svg>
+                开始录制
+            </button>
+            <button id="pauseRecording" class="control-btn pause-btn" disabled>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <rect x="5" y="4" width="4" height="12" fill="currentColor"/>
+                    <rect x="11" y="4" width="4" height="12" fill="currentColor"/>
+                </svg>
+                暂停
+            </button>
+            <button id="resumeRecording" class="control-btn resume-btn" disabled>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <polygon points="6,4 6,16 15,10" fill="currentColor"/>
+                </svg>
+                继续
+            </button>
+            <button id="stopRecording" class="control-btn stop-btn" disabled>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <rect x="5" y="5" width="10" height="10" fill="currentColor"/>
+                </svg>
+                停止录制
+            </button>
+            <button id="downloadRecording" class="control-btn download-btn" disabled>
+                <svg width="20" height="20" viewBox="0 0 20 20">
+                    <path d="M10 2 L10 12 M6 9 L10 13 L14 9 M4 15 L16 15" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                下载录像
+            </button>
+        </div>
+
+        <div class="info-panel">
+            <h3>使用说明</h3>
+            <ul>
+                <li><strong>绘图：</strong>选择画笔工具，在画布上拖动鼠标或触摸绘制</li>
+                <li><strong>橡皮擦：</strong>点击橡皮擦工具，擦除画布内容</li>
+                <li><strong>录制：</strong>点击"开始录制"按钮开始录制白板操作</li>
+                <li><strong>暂停/继续：</strong>录制过程中可以暂停和继续</li>
+                <li><strong>下载：</strong>停止录制后可以下载WebM格式的视频文件</li>
+                <li><strong>清空：</strong>点击清空按钮清除所有画布内容</li>
+            </ul>
+            
+            <h3>技术特性</h3>
+            <ul>
+                <li>✅ 使用Canvas API实现白板绘图</li>
+                <li>✅ 使用MediaRecorder API录制画布内容</li>
+                <li>✅ 支持实时预览和回放</li>
+                <li>✅ 支持暂停和继续录制</li>
+                <li>✅ 支持自定义颜色和画笔粗细</li>
+                <li>✅ 响应式设计，支持移动端</li>
+            </ul>
+        </div>
+
+        <div class="preview-section" id="previewSection" style="display: none;">
+            <h3>录制预览</h3>
+            <video id="previewVideo" controls></video>
+        </div>
+    </div>
+
+    <script src="js/whiteboard.js"></script>
+</body>
+</html>
